@@ -6,7 +6,7 @@ To be used in docker exercises
 
 # Requirements
 ```
-.NET Core v2.2.0-preview1
+.NET Core v2.2.0-preview2
 ```
 
 # dotnet CLI commands
