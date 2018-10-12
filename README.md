@@ -9,12 +9,12 @@ To be used in docker exercises
 .NET Core v2.2.0-preview1
 ```
 
-# Running the application with dotnet CLI
-```bash
-Clone repository
-cd simple-dotnetcore-webapp/WebAppForDocker
-dotnet run
-```
+# dotnet CLI commands
+```dotnet restore ```
+Downloads package dependencies referenced in *.csproj* file
+
+```dotnet publish -c Release -o out ```
+Packages the application and its dependencies with Release configuration and outputs to "/out" directory
 
 # Health Check
 Available on endpoint */health*
