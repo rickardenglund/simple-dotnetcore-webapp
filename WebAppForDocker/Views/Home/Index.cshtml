@@ -1,4 +1,9 @@
 ﻿@model AppSettings
 <div class="full-screen-container" style="background-color: @Model.BackgroundColor;">
-    <div class="absolute-centered-element">@Model.Text in @ViewData["Environment"]</div>
+    <div class="absolute-centered-element">
+        <b>@Model.Text!</b>
+    </div>
+    <div class="absolute-centered-element">
+        Welcome to <i>@ViewData["AppName"]</i> in <i>@ViewData["Environment"]</i>.
+    </div>
 </div>

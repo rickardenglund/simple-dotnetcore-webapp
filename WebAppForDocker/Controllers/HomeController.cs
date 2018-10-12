@@ -14,9 +14,15 @@ namespace WebAppForDocker.Controllers
         }
 
         public IActionResult Index() {
-            ViewData["Environment"] = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            string environment = Environment.GetEnvironmentVariable("ENVIRONMENT");
+            string appName = Environment.GetEnvironmentVariable("APP_NAME");
+
+
+            ViewData["Environment"] = environment?.Length > 0 ? $"{{{environment}}}" : "{ENVIRONMENT}";
+            ViewData["AppName"] = appName?.Length > 0 ? $"{{{appName}}}" : "{APP_NAME}";
             return View(_appSettings.Value);
         }
 
     }
 }
+    
