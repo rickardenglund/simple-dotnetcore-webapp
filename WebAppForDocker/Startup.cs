@@ -42,7 +42,7 @@ namespace WebAppForDocker
                 app.UseHsts();
             }
 
-            app.UseHealthChecks("/health");
+            app.UseHealthChecks("/healthz");
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
