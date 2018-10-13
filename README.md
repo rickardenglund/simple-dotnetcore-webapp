@@ -17,4 +17,4 @@ Downloads package dependencies referenced in *.csproj* file
 Packages the application and its dependencies with Release configuration and outputs to "/out" directory
 
 # Health Check
-Available on endpoint */health*
+Available on endpoint */healthz*
