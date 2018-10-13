@@ -19,14 +19,11 @@ namespace WebAppForDocker
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.Configure<AppSettings>(Configuration.GetSection("MyConfig"));
-
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 
             services.AddHealthChecks();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +38,8 @@ namespace WebAppForDocker
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+            app.UseStatusCodePages();
 
             app.UseHealthChecks("/healthz");
 
