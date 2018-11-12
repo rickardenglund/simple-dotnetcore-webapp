@@ -18,3 +18,22 @@ Packages the application and its dependencies with Release configuration and out
 
 # Health Check
 Available on endpoint */healthz*
+
+
+# Create cluster
+
+az login
+
+terraform init
+
+terraform apply
+
+az aks browse --resource-group {resource_group} --name {cluster_name}
+
+-----
+
+az aks install-cli
+
+az aks get-credentials --resource-group {resource_group} --name {cluster_name}
+
+kubectl get nodes
