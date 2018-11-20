@@ -22,10 +22,14 @@ Available on endpoint */healthz*
 
 # Create cluster
 
+```bash
 az login
 
+# cd terraform/aks/
 terraform init
 
+# outputs the following variables used later in the setup: 
+# resource_group, cluster_name, registry_login_server, registry_admin_username and registry_admin_password
 terraform apply
 
 az aks browse --resource-group {resource_group} --name {cluster_name}
@@ -44,4 +48,6 @@ docker build -t {registry_login_server}/webapp:v1 .
 
 docker login {registry_login_server} -u {registry_admin_username} -p {registry_admin_password}
 
-docker push
+docker push {registry_login_server}/webapp
+
+```
