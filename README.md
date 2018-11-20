@@ -48,6 +48,6 @@ docker build -t {registry_login_server}/webapp:v1 .
 
 docker login {registry_login_server} -u {registry_admin_username} -p {registry_admin_password}
 
-docker push {registry_login_server}/webapp
+docker push {registry_login_server}/webapp:v1
 
 ```
