@@ -23,7 +23,7 @@ jobs:
     steps:
       - run:
           name: testing
-          command: ./test.sh
+          command: cd .. && ./test.sh
 
 workflows:
   version: 2
