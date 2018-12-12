@@ -43,10 +43,10 @@ workflows:
       - test
   terraform_planning:
     jobs:
-      - terraform_plan
-    filters:
-      branches:
-        only:
-          - feature/*
-          - bugfix/*
+      - terraform_plan:
+          filters:
+            branches:
+              only:
+                - feature/*
+                - bugfix/*
 
