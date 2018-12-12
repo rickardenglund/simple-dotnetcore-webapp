@@ -20,6 +20,6 @@ jobs:
           command: date
   test:
     steps:
-      -run:
-        name: testing
-        command: ./test.sh
+      - run:
+          name: testing
+          command: ./test.sh
