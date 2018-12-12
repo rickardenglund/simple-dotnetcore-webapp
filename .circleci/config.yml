@@ -41,7 +41,7 @@ workflows:
     jobs:
       - build
       - test
-  terraform_plan:
+  terraform_planning:
     jobs:
       - terraform_plan
     filters:
