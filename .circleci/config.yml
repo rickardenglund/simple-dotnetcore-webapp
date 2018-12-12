@@ -18,3 +18,8 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+  test:
+    steps:
+      -run:
+        name: testing
+        command: ./test.sh
