@@ -4,6 +4,7 @@ This webapplication simply outputs a background color and a text from the config
 
 To be used in docker exercises
 
+
 # Requirements
 ```
 .NET Core v2.2.0-preview2
