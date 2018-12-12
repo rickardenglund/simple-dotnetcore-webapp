@@ -26,10 +26,27 @@ jobs:
           name: testing
           command: pwd && ls && ./test.sh
 
+  terraform_plan:
+    docker:
+    - image: hashicorp/terraform
+    steps:
+      - checkout
+      - run:
+          name: Terraform planning
+          command: terraform plan
+
 workflows:
   version: 2
   build_and_test:
     jobs:
       - build
       - test
+  terraform_plan:
+    jobs:
+      - terraform_plan
+    filters:
+      branches:
+        only:
+          - feature/*
+          - bugfix/*
 
