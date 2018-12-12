@@ -24,7 +24,7 @@ jobs:
       - checkout
       - run:
           name: testing
-          command: pwd && ./test.sh
+          command: pwd && ls && ./test.sh
 
 workflows:
   version: 2
