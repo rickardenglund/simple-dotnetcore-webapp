@@ -33,7 +33,7 @@ jobs:
       - checkout
       - run:
           name: Terraform planning
-          command: terraform plan
+          command: cd WebAppForDocker && terraform plan
 
 workflows:
   version: 2
