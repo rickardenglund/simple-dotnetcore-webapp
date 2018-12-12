@@ -19,6 +19,7 @@ jobs:
           name: Print the Current Time
           command: date
   test:
+    <<: *defaults
     steps:
       - run:
           name: testing
